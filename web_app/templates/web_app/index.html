@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'web_app/css/index.css' %}">
+    <title>Yolov5 with Django</title>
+</head>
+<body>
+    <div class="toolbar">
+        <ul>
+            <!-- thẻ url được sử dụng để tạo đường dẫn đến một URL được định nghĩa trong file urls.py -->
+            <li><a href="">My Project</a></li>
+            <li><a href="{% url 'links' %}">Some Link</a></li>
+            <li><a href="{% url 'docs' %}">Docs</a></li>
+        </ul>
+    </div>
+    <div class="form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input class="upload-file" type="file" name="image"><br>
+            <input type="text" name="name"><br>
+            <button class="button" type="submit">Upload</button>
+        </form>
+    </div>
+    <h3 class="result">Kết quả thu được:</h3>
+    <div class="image">
+        <img src="{{ result_url }}" alt="Kết quả">
+    </div>
+</body>
+</html>

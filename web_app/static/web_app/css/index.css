@@ -1,0 +1,63 @@
+div.toolbar {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+div.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+}
+
+ul {
+    background-color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+
+li {
+    color: white;
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+button.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: aqua;
+    margin: 20px;
+}
+
+input.upload-file {
+    margin: 20px;
+}
+
+h3.result {
+    text-align: center;
+}
+
+img {
+    width: 1000px;
+    height: 500px;
+    object-fit: contain;
+}
